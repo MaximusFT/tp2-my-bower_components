@@ -1133,11 +1133,11 @@ body {
     animation: fadeInLeft2 0.35s;
 }
 
-.ng-fadeInLeft2.ng-leave {
+/*.ng-fadeInLeft2.ng-leave {
     -webkit-animation: fadeOutRight 0.35s;
     -o-animation: fadeOutRight 0.35s;
     animation: fadeOutRight 0.35s;
-}
+}*/
 
 .ng-fadeIn.ng-enter {
     -webkit-animation: fadeIn 0.35s;
