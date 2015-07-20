@@ -3,7 +3,7 @@ angular.module('perfect_scrollbar', []).directive('perfectScrollbar',
   var psOptions = [
     'wheelSpeed', 'wheelPropagation', 'minScrollbarLength', 'useBothWheelAxes',
     'useKeyboard', 'suppressScrollX', 'suppressScrollY', 'scrollXMarginOffset',
-    'scrollYMarginOffset', 'includePadding', 'scrollDown' //, 'onScroll'
+    'scrollYMarginOffset', 'includePadding'//, 'onScroll', 'scrollDown'
   ];
 
   return {
@@ -39,7 +39,7 @@ angular.module('perfect_scrollbar', []).directive('perfectScrollbar',
 
       function update(event) {
         $scope.$evalAsync(function() {
-          if (event != 'mouseenter') {
+          if ($attr.scrollDown == 'true' && event != 'mouseenter') {
             setTimeout(function () {
               $($elem).scrollTop($($elem).prop("scrollHeight"));
             }, 100);
@@ -55,7 +55,7 @@ angular.module('perfect_scrollbar', []).directive('perfectScrollbar',
       if ($attr.refreshOnChange) {
         $scope.$watchCollection($attr.refreshOnChange, function() {
           update();
-        }, true);
+        });
       }
 
       // this is from a pull request - I am not totally sure what the original issue is but seems harmless
