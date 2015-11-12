@@ -10441,3 +10441,7 @@ a.text-gray-lighter:focus {
     width: 100% !important;
     border: none !important;
 }
+
+.bg-takeprofit {
+    background-color: #313131 !important;
+}
