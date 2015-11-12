@@ -10442,6 +10442,10 @@ a.text-gray-lighter:focus {
     border: none !important;
 }
 
+.modal-dialog {
+    padding-top: 5%;
+}
+
 .bg-takeprofit {
     background-color: #313131 !important;
 }
