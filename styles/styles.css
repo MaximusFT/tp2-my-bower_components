@@ -10445,3 +10445,11 @@ a.text-gray-lighter:focus {
 .modal-dialog {
     padding-top: 5%;
 }
+
+.chart-dash-header {
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+}
