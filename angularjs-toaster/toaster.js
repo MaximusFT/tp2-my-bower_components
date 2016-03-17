@@ -21,8 +21,8 @@ angular.module('toaster', ['ngAnimate', 'pascalprecht.translate'])
 
     /* Options:
         - Boolean false/true
-            'close-button': true      
-        - object if not a boolean that allows you to 
+            'close-button': true
+        - object if not a boolean that allows you to
           override showing the close button for each
           icon-class value
           'close-button': { 'toast-error': true, 'toast-info': false }
@@ -55,29 +55,34 @@ angular.module('toaster', ['ngAnimate', 'pascalprecht.translate'])
     'prevent-duplicates': false,
     'mouseover-timer-stop': true // stop timeout on mouseover and restart timer on mouseout
 })
-.service('toaster', ['$rootScope', '$translate', 'toasterConfig', function ($rootScope, $translate, toasterConfig) {
+.service('toaster', ['$rootScope', '$translate', '$log', 'toasterConfig', function ($rootScope, $translate, $log, toasterConfig) {
     this.pop = function (type, title, body, timeout, bodyOutputType, clickHandler, toasterId, showCloseButton) {
         if (angular.isObject(type)) {
             var params = type; // Enable named parameters as pop argument
             this.toast = {
+                dbId: params.body._id,
                 type: params.type,
                 title: $translate.instant(params.title),
                 body: (params.body.translate ? $translate.instant(params.body.translate) : '') + (params.body.plain ? params.body.plain : ''),
                 timeout: params.timeout,
                 bodyOutputType: params.bodyOutputType,
                 clickHandler: params.clickHandler,
-                showCloseButton: params.showCloseButton
+                showCloseButton: params.showCloseButton,
+                extraInfo: body.extraInfo
             };
             toasterId = params.toasterId;
         } else {
+        // $log.info('body toast1', body);
             this.toast = {
+                dbId: body._id,
                 type: type,
                 title: $translate.instant(title),
                 body: (body.translate ? $translate.instant(body.translate) : '') + (body.plain ? body.plain : ''),
                 timeout: timeout,
                 bodyOutputType: bodyOutputType,
                 clickHandler: clickHandler,
-                showCloseButton: showCloseButton
+                showCloseButton: showCloseButton,
+                extraInfo: body.extraInfo
             };
         }
         $rootScope.$emit('toaster-newToast', toasterId);
@@ -161,8 +166,9 @@ angular.module('toaster', ['ngAnimate', 'pascalprecht.translate'])
         unsubscribeToClearToastsEvent: toasterFactory.unsubscribeToClearToastsEvent
     };
 }])
-.directive('toasterContainer', ['$parse', '$rootScope', '$interval', '$sce', 'toasterConfig', 'toaster', 'toasterEventRegistry',
-function ($parse, $rootScope, $interval, $sce, toasterConfig, toaster, toasterEventRegistry) {
+
+.directive('toasterContainer', ['$parse', '$rootScope', '$interval', '$sce', '$log', 'toasterConfig', 'toaster', 'toasterEventRegistry',
+function ($parse, $rootScope, $interval, $sce, $log, toasterConfig, toaster, toasterEventRegistry) {
     return {
         replace: true,
         restrict: 'EA',
@@ -224,7 +230,7 @@ function ($parse, $rootScope, $interval, $sce, toasterConfig, toaster, toasterEv
                 // if toast.showCloseButton is a boolean value,
                 // it was specifically overriden in the pop arguments
                 if (typeof toast.showCloseButton === "boolean") {
-                    
+
                 } else if (typeof closeButton === "boolean") {
                     toast.showCloseButton = closeButton;
                 } else if (typeof closeButton === "object") {
@@ -337,20 +343,38 @@ function ($parse, $rootScope, $interval, $sce, toasterConfig, toaster, toasterEv
                 }
             };
 
-            $scope.click = function (toast) {
+            $scope.click = function(toast) {
+
+              $rootScope.$emit('notification:getRoute', {
+                  extraInfo: toast.extraInfo,
+                  notification: toast.dbId,
+                  state: 1
+              });
+              $scope.clickCloseButton(toast);
+            };
+
+            $scope.clickCloseButton = function (toast) {
                 if ($scope.config.tap === true || toast.showCloseButton === true) {
                     var removeToast = true;
                     if (toast.clickHandler) {
                         if (angular.isFunction(toast.clickHandler)) {
                             removeToast = toast.clickHandler(toast, toast.showCloseButton);
+                            $log.info('toast', toast);
                         } else if (angular.isFunction($scope.$parent.$eval(toast.clickHandler))) {
                             removeToast = $scope.$parent.$eval(toast.clickHandler)(toast, toast.showCloseButton);
+                            $log.info('toast2', toast);
                         } else {
                             console.log("TOAST-NOTE: Your click handler is not inside a parent scope of toaster-container.");
                         }
                     }
                     if (removeToast) {
                         $scope.removeToast(toast.id);
+                        $rootScope.$emit('notification:setRead', {
+                            notification: toast.dbId,
+                            state: 1
+                        });
+
+                        // $log.info('toast3', toast);
                     }
                 }
             };
@@ -358,7 +382,7 @@ function ($parse, $rootScope, $interval, $sce, toasterConfig, toaster, toasterEv
         template:
         '<div id="toast-container" ng-class="[config.position, config.animation]">' +
           '<div ng-repeat="toaster in toasters" class="toast" ng-class="toaster.type" ng-click="click(toaster)" ng-mouseover="stopTimer(toaster)" ng-mouseout="restartTimer(toaster)">' +
-            '<button type="button" class="toast-close-button" ng-show="toaster.showCloseButton" ng-click="click(toaster)">&times;</button>' +
+            '<button type="button" class="toast-close-button" ng-show="toaster.showCloseButton" ng-click="clickCloseButton(toaster)">&times;</button>' +
             '<div ng-class="config.title">{{toaster.title}}</div>' +
             '<div ng-class="config.message" ng-switch on="toaster.bodyOutputType">' +
               '<div ng-switch-when="trustedHtml" ng-bind-html="toaster.html"></div>' +
