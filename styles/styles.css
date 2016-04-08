@@ -1540,7 +1540,7 @@ body {
     -webkit-transition: content 0s linear 0.4s;
     -o-transition: content 0s linear 0.4s;
     transition: content 0s linear 0.4s;
-    content: "\e023";
+
 }
 
 .settings-wrapper > .settings-inner:after {
