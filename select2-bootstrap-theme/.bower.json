@@ -1,0 +1,29 @@
+{
+  "name": "select2-bootstrap-theme",
+  "version": "0.1.0-beta.5",
+  "main": [
+    "dist/select2-bootstrap.css",
+    "dist/select2-bootstrap.min.css"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.6",
+    "respond": "^1.4.2",
+    "anchor-js": "^3.1.0"
+  },
+  "homepage": "https://github.com/fk/select2-bootstrap-theme",
+  "_release": "0.1.0-beta.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.0-beta.5",
+    "commit": "eef573b0a23c06f9a6ce0e8acbb12689d182f7f1"
+  },
+  "_source": "https://github.com/fk/select2-bootstrap-theme.git",
+  "_target": "~0.1.0-beta.4",
+  "_originalSource": "select2-bootstrap-theme"
+}
