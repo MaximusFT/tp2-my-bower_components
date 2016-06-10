@@ -1,7 +1,7 @@
 {
   "name": "web-bootstrap",
   "main": "index.js",
-  "_source": "C:\\takeprofit-my\\node_modules\\meanio\\resources\\web-bootstrap.js",
+  "_source": "/home/nikita/Документы/projects/acrm2/node_modules/meanio/resources/web-bootstrap.js",
   "_target": "*",
   "_originalSource": "./node_modules/meanio/resources/web-bootstrap.js"
 }

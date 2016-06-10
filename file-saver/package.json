@@ -1,0 +1,56 @@
+{
+  "name": "file-saver",
+  "version": "1.2.2",
+  "description": "An HTML5 saveAs() FileSaver implementation",
+  "main": "FileSaver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "uglifyjs FileSaver.js --mangle --comments /@source/ > FileSaver.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eligrey/FileSaver.js.git"
+  },
+  "keywords": [
+    "filesaver",
+    "saveas",
+    "blob"
+  ],
+  "author": {
+    "name": "Eli Grey",
+    "email": "me@eligrey.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eligrey/FileSaver.js/issues"
+  },
+  "homepage": "https://github.com/eligrey/FileSaver.js#readme",
+  "devDependencies": {
+    "uglify-js": "^2.6.2"
+  },
+  "_id": "file-saver@1.2.2",
+  "_shasum": "2f54261e5200e285da19223ffc39d86c6b844d9a",
+  "_from": "file-saver@*",
+  "_npmVersion": "3.8.6",
+  "_nodeVersion": "6.0.0",
+  "_npmUser": {
+    "name": "endless",
+    "email": "jimmy@warting.se"
+  },
+  "dist": {
+    "shasum": "2f54261e5200e285da19223ffc39d86c6b844d9a",
+    "tarball": "https://registry.npmjs.org/file-saver/-/file-saver-1.2.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "endless",
+      "email": "jimmy@warting.se"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/file-saver-1.2.2.tgz_1464333434994_0.9391505559906363"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/file-saver/-/file-saver-1.2.2.tgz"
+}

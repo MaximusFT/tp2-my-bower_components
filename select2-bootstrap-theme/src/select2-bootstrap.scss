@@ -1,4 +1,4 @@
-/*! Select2 Bootstrap Theme v0.1.0-beta.7 | MIT License | github.com/select2/select2-bootstrap-theme */
+/*! Select2 Bootstrap Theme v0.1.0-beta.5 | MIT License | github.com/select2/select2-bootstrap-theme */
 
 //
 // Variables
@@ -358,7 +358,7 @@ $clear-selection-color: $dropdown-arrow-color !default;
     .select2-selection--single {
         height: $input-height-base;
         line-height: $line-height-base;
-        padding: $padding-base-vertical ($padding-base-horizontal + $caret-width-base*3) $padding-base-vertical $padding-base-horizontal;
+        padding: $padding-base-vertical $padding-base-horizontal + $caret-width-base*3 $padding-base-vertical $padding-base-horizontal;
 
         /**
          * Adjust the single Select2's dropdown arrow button appearance.

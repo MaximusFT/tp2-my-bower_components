@@ -61,7 +61,7 @@
     "tag": "v0.4.3",
     "commit": "113323c741a87d2f74e44d134272efca2307ae76"
   },
-  "_source": "https://github.com/l-lin/angular-datatables.git",
+  "_source": "git://github.com/l-lin/angular-datatables.git",
   "_target": "~0.4.3",
   "_originalSource": "angular-datatables"
 }

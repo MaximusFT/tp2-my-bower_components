@@ -35,7 +35,7 @@
     "tag": "v0.3.2",
     "commit": "beea44c56a94d7ce0dfd158c68c4ab9da5d725a9"
   },
-  "_source": "https://github.com/Venturocket/angular-slider.git",
-  "_target": "~0.3.2",
+  "_source": "git://github.com/Venturocket/angular-slider.git",
+  "_target": "0.3.2",
   "_originalSource": "venturocket-angular-slider"
 }

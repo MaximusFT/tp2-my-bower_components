@@ -22,7 +22,8 @@
     "tag": "2.7.2",
     "commit": "fbe59885ce3e7e509d02101137f06722e2d04ebb"
   },
-  "_source": "https://github.com/PascalPrecht/bower-angular-translate-storage-local.git",
+  "_source": "git://github.com/PascalPrecht/bower-angular-translate-storage-local.git",
   "_target": "~2.7.2",
-  "_originalSource": "angular-translate-storage-local"
+  "_originalSource": "angular-translate-storage-local",
+  "_direct": true
 }
