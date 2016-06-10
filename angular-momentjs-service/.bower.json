@@ -28,8 +28,7 @@
     "tag": "0.1.0",
     "commit": "fdedbb1f335108d443150e70494a6e7c36a3e051"
   },
-  "_source": "git://github.com/assisrafael/angular-momentjs.git",
+  "_source": "https://github.com/assisrafael/angular-momentjs.git",
   "_target": "~0.1.0",
-  "_originalSource": "angular-momentjs-service",
-  "_direct": true
+  "_originalSource": "angular-momentjs-service"
 }

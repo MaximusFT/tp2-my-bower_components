@@ -16,7 +16,7 @@
     "branch": "master",
     "commit": "c9812f4d624d09231e466748845e288566e0851c"
   },
-  "_source": "git://github.com/esvit/ng-table-export.git",
+  "_source": "https://github.com/esvit/ng-table-export.git",
   "_target": "*",
   "_originalSource": "ng-table-export"
 }

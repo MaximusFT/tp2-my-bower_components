@@ -7,7 +7,7 @@
     "branch": "master",
     "commit": "4f93032cfafe2002f24ed6bd7dc1510931498503"
   },
-  "_source": "git://github.com/dbushell/Nestable.git",
+  "_source": "https://github.com/dbushell/Nestable.git",
   "_target": "*",
   "_originalSource": "nestable"
 }

@@ -30,7 +30,7 @@
     "tag": "v0.0.4",
     "commit": "65b3722a2d5a9b2230f07d6822d7c1a6181a15fe"
   },
-  "_source": "git://github.com/itsdrewmiller/angular-perfect-scrollbar.git",
+  "_source": "https://github.com/itsdrewmiller/angular-perfect-scrollbar.git",
   "_target": "~0.0.4",
   "_originalSource": "angular-perfect-scrollbar"
 }

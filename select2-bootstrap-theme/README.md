@@ -5,7 +5,7 @@ A Select2 v4 [Theme](https://select2.github.io/examples.html#themes) for Bootstr
 Demonstrations available at
 http://select2.github.io/select2-bootstrap-theme/
 
-Tested with Bootstrap v3.3.5 and Select2 v4.0.3
+Tested with Bootstrap v3.3.6 and Select2 v4.0.3
 in latest Chrome, Firefox and Safari (Mac) and Internet Explorer 11 and 10.
 
 ##### Installation
@@ -26,6 +26,16 @@ $( "#dropdown" ).select2({
 ```
 
 ##### Changelog
+
+###### 0.1.0-beta.7
+
+* Fixed version number in distribution files.
+
+###### 0.1.0-beta.6
+
+* Fixed a bug where math would not compile correctly in Less v2.6.0 [[#36](https://github.com/select2/select2-bootstrap-theme/pull/36)].
+* Fixed version number for Bower and NPM.
+* Docs: Updated AnchorJS to latest version.
 
 ###### 0.1.0-beta.5
 
@@ -75,4 +85,4 @@ Develop in `src/select2-bootstrap.scss` and test your changes using `grunt watch
 
 ##### Copyright and license
 
-The license is available within the repository in the [LICENSE][LICENSE] file.
+The license is available within the repository in the [LICENSE](LICENSE) file.

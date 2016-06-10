@@ -74,7 +74,7 @@
     "tag": "2.15.2",
     "commit": "3904fd20a4d808d8f450c75a29fbcaad4f2a6438"
   },
-  "_source": "git://github.com/blueimp/Gallery.git",
+  "_source": "https://github.com/blueimp/Gallery.git",
   "_target": "2.15.2",
   "_originalSource": "blueimp-gallery"
 }

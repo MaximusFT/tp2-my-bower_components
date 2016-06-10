@@ -22,8 +22,7 @@
     "tag": "2.7.2",
     "commit": "c3aeb7c55803a0e773b22621dbcba47e486c8f1f"
   },
-  "_source": "git://github.com/PascalPrecht/bower-angular-translate-storage-cookie.git",
+  "_source": "https://github.com/PascalPrecht/bower-angular-translate-storage-cookie.git",
   "_target": "~2.7.2",
-  "_originalSource": "angular-translate-storage-cookie",
-  "_direct": true
+  "_originalSource": "angular-translate-storage-cookie"
 }

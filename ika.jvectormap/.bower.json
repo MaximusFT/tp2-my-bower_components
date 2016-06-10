@@ -18,7 +18,7 @@
     "branch": "master",
     "commit": "32001f61e94d1e17faca713c5214049f861fa606"
   },
-  "_source": "git://github.com/kakirigi/ika.jvectormap.git",
+  "_source": "https://github.com/kakirigi/ika.jvectormap.git",
   "_target": "*",
   "_originalSource": "ika.jvectormap"
 }
