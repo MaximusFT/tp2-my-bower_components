@@ -2,7 +2,6 @@
 .tmp/
 .DS_Store
 .idea
-*.log
 *.sublime-project
 *.sublime-workspace
 bower_components/

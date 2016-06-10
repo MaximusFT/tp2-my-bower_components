@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  var fs = require('fs');
-  var path = require('path');
   var gulp = require('gulp');
   var less = require('gulp-less');
   var sourcemaps = require('gulp-sourcemaps');
@@ -18,11 +16,10 @@
   var git = require('gulp-git');
   var shell = require('gulp-shell');
   var rename = require('gulp-rename');
+  var fs = require('fs');
   var sequence = require('gulp-sequence');
+  var ngAnnotate = require('gulp-ng-annotate');
   var rimraf = require('gulp-rimraf');
-  var istanbul = require('gulp-istanbul');
-  var istanbulReport = require('gulp-istanbul-report');
-  var mochaPhantomJS = require('gulp-mocha-phantomjs');
 
   gulp.task('clean', function () {
     return gulp.src('./dist/*', { read: false })
@@ -55,33 +52,22 @@
       .pipe(jscs());
   });
 
-  gulp.task('cover', function () {
-    return gulp.src('angular-chart.js')
-      .pipe(istanbul({ coverageVariable: '__coverage__' }))
-      .pipe(rename('coverage.js'))
-      .pipe(gulp.dest('test/fixtures'));
-  });
+  gulp.task('cover', shell.task([
+    './node_modules/istanbul/lib/cli.js instrument angular-chart.js > test/fixtures/coverage.js'
+  ]));
 
-  gulp.task('unit', function () {
-    return gulp.src('test/index.html', { read: false })
-      .pipe(mochaPhantomJS({
-        phantomjs: {
-          hooks: 'mocha-phantomjs-istanbul',
-          coverageFile: 'coverage/coverage.json'
-        },
-        reporter: 'spec'
-    }));
-  });
+  gulp.task('unit', shell.task([
+    './node_modules/mocha-phantomjs/bin/mocha-phantomjs -R spec test/index.html -k mocha-phantomjs-istanbul'
+  ]));
 
   gulp.task('integration', function () {
-    return gulp.src(path.join('test', 'test.integration.js'), { read: false })
+    return gulp.src('test/test.integration.js', {read: false})
       .pipe(mocha({ reporter: 'list', timeout: 20000, require: 'test/support/setup.js' }));
   });
 
-  gulp.task('report', function () {
-    return gulp.src('coverage/coverage.json')
-      .pipe(istanbulReport({ reporters: ['lcov'] }));
-  });
+  gulp.task('report', shell.task([
+    './node_modules/istanbul/lib/cli.js report --include coverage/coverage.json'
+  ]));
 
   gulp.task('bump-patch', bump('patch'));
   gulp.task('bump-minor', bump('minor'));
@@ -89,12 +75,14 @@
 
   gulp.task('bower', function () {
     return gulp.src('./angular-chart.js')
+      .pipe(ngAnnotate({ single_quotes: true }))
       .pipe(gulp.dest('./dist'));
   });
 
   gulp.task('js', ['lint', 'style', 'bower'], function () {
     return gulp.src('./angular-chart.js')
       .pipe(rename('angular-chart.min.js'))
+      .pipe(ngAnnotate({ single_quotes: true }))
       .pipe(sourcemaps.init())
       .pipe(uglify())
       .pipe(sourcemaps.write('./'))

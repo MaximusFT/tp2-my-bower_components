@@ -134,7 +134,10 @@ module.exports = function(grunt) {
         autoWatch: true
       }
     },
-    ngAnnotate: {
+    ngmin: {
+      options: {
+        banner: '<%= meta.banner %>'
+      },
       dist: {
         src: ['<%= yo.src %>/<%= pkg.name %>.js'],
         dest: '<%= yo.dist %>/<%= pkg.name %>.js'
@@ -174,7 +177,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'concat:dist',
-    'ngAnnotate:dist',
+    'ngmin:dist',
     'uglify:dist'
   ]);
 

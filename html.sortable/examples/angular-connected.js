@@ -20,17 +20,17 @@ app.controller('MainCtrl', function($scope) {
     { id: 3, name: 'C' },
     { id: 4, name: 'D' }
   ];
-
+  
   $('ul').bind('dragover', function (event) {
     var $dropZone = $(this), $timeout = window.dropZoneTimeout;
-    var $hClass = 'muted';
+    var $hClass = 'hover';
 
     if (!$timeout) {
       $dropZone.addClass($hClass);
     } else {
       clearTimeout($timeout);
     }
-
+    
     window.dropZoneTimeout = setTimeout(function () {
       window.dropZoneTimeout = null;
       $dropZone.removeClass($hClass);

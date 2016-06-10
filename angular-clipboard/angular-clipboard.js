@@ -11,14 +11,11 @@
 
 return angular.module('angular-clipboard', [])
     .factory('clipboard', ['$document', function ($document) {
-        function createNode(text, context) {
+        function createNode(text) {
             var node = $document[0].createElement('textarea');
             node.style.position = 'absolute';
-            node.textContent = text;
             node.style.left = '-10000px';
-            if (context instanceof HTMLElement) {
-                node.style.top = context.getBoundingClientRect().top + 'px';
-            }
+            node.textContent = text;
             return node;
         }
 
@@ -41,16 +38,15 @@ return angular.module('angular-clipboard', [])
             }
         }
 
-        function copyText(text, context) {
-            var node = createNode(text, context);
+        function copyText(text) {
+            var node = createNode(text);
             $document[0].body.appendChild(node);
             copyNode(node);
             $document[0].body.removeChild(node);
         }
 
         return {
-            copyText: copyText,
-            supported: 'queryCommandSupported' in document && document.queryCommandSupported('copy')
+            copyText: copyText
         };
     }])
     .directive('clipboard', ['clipboard', function (clipboard) {
@@ -59,15 +55,12 @@ return angular.module('angular-clipboard', [])
             scope: {
                 onCopied: '&',
                 onError: '&',
-                text: '=',
-                supported: '=?'
+                text: '='
             },
             link: function (scope, element) {
-                scope.supported = clipboard.supported;
-
                 element.on('click', function (event) {
                     try {
-                        clipboard.copyText(scope.text, element[0]);
+                        clipboard.copyText(scope.text);
                         if (angular.isFunction(scope.onCopied)) {
                             scope.$evalAsync(scope.onCopied());
                         }

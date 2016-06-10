@@ -8,7 +8,7 @@ var defaultParams = {
   closeOnConfirm: true,
   closeOnCancel: true,
   confirmButtonText: 'OK',
-  confirmButtonColor: '#8CD4F5',
+  confirmButtonColor: '#AEDEF4',
   cancelButtonText: 'Cancel',
   imageUrl: null,
   imageSize: null,
@@ -19,8 +19,7 @@ var defaultParams = {
   allowEscapeKey: true,
   inputType: 'text',
   inputPlaceholder: '',
-  inputValue: '',
-  showLoaderOnConfirm: false
+  inputValue: ''
 };
 
 export default defaultParams;

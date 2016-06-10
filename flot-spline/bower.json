@@ -11,7 +11,7 @@
     "flot",
     "spline"
   ],
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "main": "js/jquery.flot.spline.js",
   "ignore": [
     "**/.*",

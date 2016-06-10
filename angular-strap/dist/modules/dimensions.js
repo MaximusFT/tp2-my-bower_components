@@ -1,13 +1,14 @@
 /**
  * angular-strap
- * @version v2.3.8 - 2016-03-31
+ * @version v2.2.4 - 2015-05-28
  * @link http://mgcrea.github.io/angular-strap
  * @author Olivier Louvignes <olivier@mg-crea.com> (https://github.com/mgcrea)
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 'use strict';
 
-angular.module('mgcrea.ngStrap.helpers.dimensions', []).factory('dimensions', function() {
+angular.module('mgcrea.ngStrap.helpers.dimensions', []).factory('dimensions', [ '$document', '$window', function($document, $window) {
+  var jqLite = angular.element;
   var fn = {};
   var nodeName = fn.nodeName = function(element, name) {
     return element.nodeName && element.nodeName.toLowerCase() === name.toLowerCase();
@@ -34,16 +35,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', []).factory('dimensions', fu
     };
   };
   fn.setOffset = function(element, options, i) {
-    var curPosition;
-    var curLeft;
-    var curCSSTop;
-    var curTop;
-    var curOffset;
-    var curCSSLeft;
-    var calculatePosition;
-    var position = fn.css(element, 'position');
-    var curElem = angular.element(element);
-    var props = {};
+    var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition, position = fn.css(element, 'position'), curElem = angular.element(element), props = {};
     if (position === 'static') {
       element.style.position = 'relative';
     }
@@ -81,19 +73,17 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', []).factory('dimensions', fu
     var offsetParentRect = {
       top: 0,
       left: 0
-    };
-    var offsetParentEl;
-    var offset;
+    }, offsetParentElement, offset;
     if (fn.css(element, 'position') === 'fixed') {
       offset = element.getBoundingClientRect();
     } else {
-      offsetParentEl = offsetParentElement(element);
+      offsetParentElement = offsetParent(element);
       offset = fn.offset(element);
-      if (!nodeName(offsetParentEl, 'html')) {
-        offsetParentRect = fn.offset(offsetParentEl);
+      if (!nodeName(offsetParentElement, 'html')) {
+        offsetParentRect = fn.offset(offsetParentElement);
       }
-      offsetParentRect.top += fn.css(offsetParentEl, 'borderTopWidth', true);
-      offsetParentRect.left += fn.css(offsetParentEl, 'borderLeftWidth', true);
+      offsetParentRect.top += fn.css(offsetParentElement, 'borderTopWidth', true);
+      offsetParentRect.left += fn.css(offsetParentElement, 'borderLeftWidth', true);
     }
     return {
       width: element.offsetWidth,
@@ -102,7 +92,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', []).factory('dimensions', fu
       left: offset.left - offsetParentRect.left - fn.css(element, 'marginLeft', true)
     };
   };
-  function offsetParentElement(element) {
+  var offsetParent = function offsetParentElement(element) {
     var docElement = element.ownerDocument;
     var offsetParent = element.offsetParent || docElement;
     if (nodeName(offsetParent, '#document')) return docElement.documentElement;
@@ -110,7 +100,7 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', []).factory('dimensions', fu
       offsetParent = offsetParent.offsetParent;
     }
     return offsetParent || docElement.documentElement;
-  }
+  };
   fn.height = function(element, outer) {
     var value = element.offsetHeight;
     if (outer) {
@@ -130,4 +120,4 @@ angular.module('mgcrea.ngStrap.helpers.dimensions', []).factory('dimensions', fu
     return value;
   };
   return fn;
-});
+} ]);

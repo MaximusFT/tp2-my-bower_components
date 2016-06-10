@@ -62,20 +62,6 @@ $provide.value("$locale", {
       "Nov",
       "Dez"
     ],
-    "STANDALONEMONTH": [
-      "Januar",
-      "Februar",
-      "M\u00e4rz",
-      "April",
-      "Mai",
-      "Juni",
-      "Juli",
-      "Auguscht",
-      "Sept\u00e4mber",
-      "Oktoober",
-      "Nov\u00e4mber",
-      "Dez\u00e4mber"
-    ],
     "WEEKENDRANGE": [
       5,
       6
@@ -119,7 +105,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "gsw-ch",
-  "localeID": "gsw_CH",
   "pluralCat": function(n, opt_precision) {  if (n == 1) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

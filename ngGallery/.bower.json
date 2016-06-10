@@ -29,13 +29,14 @@
   "dependencies": {
     "angular": "~1.4.0"
   },
-  "_release": "95f06f892b",
+  "_release": "fbb3c67f45",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "95f06f892b2ccc98e4812ff29c4feda256c4f3e7"
+    "commit": "fbb3c67f455c75b8f4a591123cac02862ca654f1"
   },
-  "_source": "https://github.com/jkuri/ngGallery.git",
+  "_source": "git://github.com/jkuri/ngGallery.git",
   "_target": "*",
-  "_originalSource": "ngGallery"
+  "_originalSource": "ngGallery",
+  "_direct": true
 }

@@ -1,10 +1,11 @@
 {
   "name": "bootstrap",
   "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+  "version": "3.3.4",
   "keywords": [
     "css",
     "js",
-    "sass",
+    "less",
     "mobile-first",
     "responsive",
     "front-end",
@@ -12,11 +13,15 @@
     "web"
   ],
   "homepage": "http://getbootstrap.com",
-  "license": "MIT",
-  "moduleType": "globals",
   "main": [
-    "scss/bootstrap.scss",
-    "dist/js/bootstrap.js"
+    "less/bootstrap.less",
+    "dist/css/bootstrap.css",
+    "dist/js/bootstrap.js",
+    "dist/fonts/glyphicons-halflings-regular.eot",
+    "dist/fonts/glyphicons-halflings-regular.svg",
+    "dist/fonts/glyphicons-halflings-regular.ttf",
+    "dist/fonts/glyphicons-halflings-regular.woff",
+    "dist/fonts/glyphicons-halflings-regular.woff2"
   ],
   "ignore": [
     "/.*",
@@ -29,16 +34,16 @@
     "test-infra"
   ],
   "dependencies": {
-    "jquery": "1.9.1 - 2"
+    "jquery": ">= 1.9.1"
   },
-  "version": "4.0.0-alpha.2",
-  "_release": "4.0.0-alpha.2",
+  "_release": "3.3.4",
   "_resolution": {
     "type": "version",
-    "tag": "v4.0.0-alpha.2",
-    "commit": "48938155eb24b4ccdde09426066869504c6dab3c"
+    "tag": "v3.3.4",
+    "commit": "a10eb60bc0b07b747fa0c4ebd8821eb7307bd07f"
   },
-  "_source": "https://github.com/twbs/bootstrap.git",
-  "_target": "4.0.0-alpha.2",
-  "_originalSource": "bootstrap"
+  "_source": "git://github.com/twbs/bootstrap.git",
+  "_target": "~3.3.4",
+  "_originalSource": "bootstrap",
+  "_direct": true
 }

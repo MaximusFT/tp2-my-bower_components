@@ -18,7 +18,7 @@ describe('ngIdle', function() {
 
 
     beforeEach(function() {
-      angular.module('app', []).config(['IdleProvider',
+      angular.module('app', function() {}).config(['IdleProvider',
       function(_IdleProvider_) {
         IdleProvider = _IdleProvider_;
       }
@@ -26,14 +26,14 @@ describe('ngIdle', function() {
 
       module('app');
 
-      inject(function(_$interval_, _$log_, _$rootScope_, _$document_, _$injector_, _IdleLocalStorage_) {
+      inject(['$interval', '$log', '$rootScope', '$document', '$injector', 'IdleLocalStorage', function(_$interval_, _$log_, _$rootScope_, _$document_, _$injector_, _LocalStorage_) {
         $rootScope = _$rootScope_;
         $interval = _$interval_;
         $log = _$log_;
         $document = _$document_;
         $injector = _$injector_;
-        LocalStorage = _IdleLocalStorage_;
-      });
+        LocalStorage = _LocalStorage_;
+      }]);
 
       Keepalive = {
         start: function() {},

@@ -62,20 +62,6 @@ $provide.value("$locale", {
       "Noya",
       "Dek"
     ],
-    "STANDALONEMONTH": [
-      "Yanvar",
-      "Fevral",
-      "Mart",
-      "Aprel",
-      "May",
-      "Iyun",
-      "Iyul",
-      "Avgust",
-      "Sentabr",
-      "Oktabr",
-      "Noyabr",
-      "Dekabr"
-    ],
     "WEEKENDRANGE": [
       5,
       6
@@ -119,7 +105,6 @@ $provide.value("$locale", {
     ]
   },
   "id": "uz-latn-uz",
-  "localeID": "uz_Latn_UZ",
   "pluralCat": function(n, opt_precision) {  if (n == 1) {    return PLURAL_CATEGORY.ONE;  }  return PLURAL_CATEGORY.OTHER;}
 });
 }]);

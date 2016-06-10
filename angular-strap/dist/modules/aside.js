@@ -1,6 +1,6 @@
 /**
  * angular-strap
- * @version v2.3.8 - 2016-03-31
+ * @version v2.2.4 - 2015-05-28
  * @link http://mgcrea.github.io/angular-strap
  * @author Olivier Louvignes <olivier@mg-crea.com> (https://github.com/mgcrea)
  * @license MIT License, http://www.opensource.org/licenses/MIT
@@ -13,7 +13,7 @@ angular.module('mgcrea.ngStrap.aside', [ 'mgcrea.ngStrap.modal' ]).provider('$as
     prefixClass: 'aside',
     prefixEvent: 'aside',
     placement: 'right',
-    templateUrl: 'aside/aside.tpl.html',
+    template: 'aside/aside.tpl.html',
     contentTemplate: false,
     container: false,
     element: null,
@@ -22,16 +22,17 @@ angular.module('mgcrea.ngStrap.aside', [ 'mgcrea.ngStrap.modal' ]).provider('$as
     html: false,
     show: true
   };
-  this.$get = [ '$modal', function($modal) {
+  this.$get = [ '$modalStrap', function($modalStrap) {
     function AsideFactory(config) {
       var $aside = {};
       var options = angular.extend({}, defaults, config);
-      $aside = $modal(options);
+      $aside = $modalStrap(options);
       return $aside;
     }
     return AsideFactory;
   } ];
 }).directive('bsAside', [ '$window', '$sce', '$aside', function($window, $sce, $aside) {
+  var requestAnimationFrame = $window.requestAnimationFrame || $window.setTimeout;
   return {
     restrict: 'EAC',
     scope: true,
@@ -41,7 +42,7 @@ angular.module('mgcrea.ngStrap.aside', [ 'mgcrea.ngStrap.modal' ]).provider('$as
         element: element,
         show: false
       };
-      angular.forEach([ 'template', 'templateUrl', 'controller', 'controllerAs', 'contentTemplate', 'placement', 'backdrop', 'keyboard', 'html', 'container', 'animation' ], function(key) {
+      angular.forEach([ 'template', 'contentTemplate', 'placement', 'backdrop', 'keyboard', 'html', 'container', 'animation' ], function(key) {
         if (angular.isDefined(attr[key])) options[key] = attr[key];
       });
       var falseValueRegExp = /^(false|0|)$/i;
@@ -49,21 +50,17 @@ angular.module('mgcrea.ngStrap.aside', [ 'mgcrea.ngStrap.modal' ]).provider('$as
         if (angular.isDefined(attr[key]) && falseValueRegExp.test(attr[key])) options[key] = false;
       });
       angular.forEach([ 'title', 'content' ], function(key) {
-        if (attr[key]) {
-          attr.$observe(key, function(newValue, oldValue) {
-            scope[key] = $sce.trustAsHtml(newValue);
-          });
-        }
+        attr[key] && attr.$observe(key, function(newValue, oldValue) {
+          scope[key] = $sce.trustAsHtml(newValue);
+        });
       });
-      if (attr.bsAside) {
-        scope.$watch(attr.bsAside, function(newValue, oldValue) {
-          if (angular.isObject(newValue)) {
-            angular.extend(scope, newValue);
-          } else {
-            scope.content = newValue;
-          }
-        }, true);
-      }
+      attr.bsAside && scope.$watch(attr.bsAside, function(newValue, oldValue) {
+        if (angular.isObject(newValue)) {
+          angular.extend(scope, newValue);
+        } else {
+          scope.content = newValue;
+        }
+      }, true);
       var aside = $aside(options);
       element.on(attr.trigger || 'click', aside.toggle);
       scope.$on('$destroy', function() {
