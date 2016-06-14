@@ -131,7 +131,7 @@ sup {
 
 .btn.b-primary:hover, .btn.b-primary:focus, .btn.primary:hover, .btn.primary:focus {
   color: rgba(255, 255, 255, 0.87) !important;
-  background-color: #0cc2aa; }
+  background-color: #ffcc00; }
 .btn.b-accent:hover, .btn.b-accent:focus, .btn.accent:hover, .btn.accent:focus {
   color: rgba(255, 255, 255, 0.87) !important;
   background-color: #a88add; }

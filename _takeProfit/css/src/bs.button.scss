@@ -50,7 +50,7 @@
 .btn{
 	&.b-primary,
 	&.primary{
-		@include btn-outline($primary, $primary-color);
+		@include btn-outline($warn, $primary-color);
 	}
 	&.b-accent,
 	&.accent{
