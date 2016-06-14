@@ -136,7 +136,7 @@ sup {
   color: rgba(255, 255, 255, 0.87) !important;
   background-color: #a88add; }
 .btn.b-warn:hover, .btn.b-warn:focus, .btn.warn:hover, .btn.warn:focus {
-  color: rgba(255, 255, 255, 0.87) !important;
+  color: #2a2b3c !important;
   background-color: #ffcc00; }
 .btn.b-success:hover, .btn.b-success:focus, .btn.success:hover, .btn.success:focus {
   color: rgba(255, 255, 255, 0.87) !important;

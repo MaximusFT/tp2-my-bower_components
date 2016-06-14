@@ -58,7 +58,7 @@
 	}
 	&.b-warn,
 	&.warn{
-		@include btn-outline($warn, $warn-color);
+		@include btn-outline($warn, $black);
 	}
 	&.b-success,
 	&.success{
