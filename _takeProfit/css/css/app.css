@@ -1786,7 +1786,7 @@ body {
         .navside .nav li a:hover, .navside .nav li a:focus {
           background-color: rgba(0, 0, 0, 0.065); }
       .navside .nav li.active {
-        background-color: #ffcc00; }
+        background-color: rgba(0, 0, 0, 0.065); }
         .navside .nav li.active > a {
           background-color: transparent; }
           .navside .nav li.active > a .nav-caret i {
