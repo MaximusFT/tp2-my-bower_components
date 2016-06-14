@@ -1,0 +1,85 @@
+@charset "UTF-8";
+.list-right {
+  float: right;
+  padding-left: 1rem; }
+  .list-right + .list-body {
+    margin-right: 56px; }
+
+.box .collapsed .fa.fa-caret-up:before {
+  content: ""; }
+
+.ng-table th {
+  text-align: left; }
+
+flot {
+  display: block;
+  width: 100%; }
+
+flot .legend > table {
+  top: 0 !important; }
+
+flot .legend > table tr td {
+  padding: 3px; }
+
+flot .legend > table tr td:first-child {
+  padding-left: 3px; }
+
+flot .legend > table tr td:last-child {
+  padding-right: 3px; }
+
+flot .legend > table tr + tr td {
+  padding-top: 0; }
+
+flot .legend > div:first-child {
+  border-color: rgba(0, 0, 0, 0.1) !important; }
+
+flot .legend .legendColorBox > div {
+  border-radius: 50%;
+  padding: 0 !important; }
+
+flot .legend .legendColorBox > div > div {
+  width: 5px !important;
+  border-width: 6px !important;
+  opacity: 0.35;
+  border-radius: 50%; }
+
+.flot-chart-content {
+  width: 100%;
+  height: 100%; }
+
+.flot-pie-label {
+  padding: 3px 5px;
+  font-size: 10px;
+  text-align: center;
+  color: #fff; }
+
+#flotTip {
+  position: relative;
+  padding: 5px;
+  font-size: 12px !important;
+  border-radius: 2px !important;
+  border-color: transparent !important;
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  color: #f1f1f1;
+  z-index: 5; }
+
+.easypie {
+  display: inline-block;
+  position: relative;
+  padding: 0 5px; }
+
+.easypie span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  margin-left: -50%;
+  height: 30px;
+  margin-top: -15px;
+  font-size: 20px; }
+
+.easypie canvas {
+  max-width: 100%; }
+
+/*# sourceMappingURL=_style.css.map */
