@@ -54,7 +54,7 @@
 }
 
 .warn {
-  @include color-variant($warn, $warn-color);
+  @include color-variant($warn, $black);
 }
 
 .success {

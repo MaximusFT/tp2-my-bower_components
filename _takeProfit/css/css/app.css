@@ -874,8 +874,8 @@ a.list-group-item {
 .pager > .active > a,
 .pager > .active > span {
   color: white !important;
-  background-color: #0cc2aa !important;
-  border-color: #0cc2aa !important; }
+  background-color: #ffcc00 !important;
+  border-color: #ffcc00 !important; }
 
 .pagination > li {
   display: inline;
@@ -1786,7 +1786,7 @@ body {
         .navside .nav li a:hover, .navside .nav li a:focus {
           background-color: rgba(0, 0, 0, 0.065); }
       .navside .nav li.active {
-        background-color: rgba(0, 0, 0, 0.065); }
+        background-color: #ffcc00; }
         .navside .nav li.active > a {
           background-color: transparent; }
           .navside .nav li.active > a .nav-caret i {
@@ -2795,7 +2795,7 @@ body {
     background-color: #a88add; }
 
 .warn {
-  color: rgba(255, 255, 255, 0.87);
+  color: #2a2b3c;
   background-color: #ffcc00; }
   .warn .lt {
     background-color: #ffcf0d; }
