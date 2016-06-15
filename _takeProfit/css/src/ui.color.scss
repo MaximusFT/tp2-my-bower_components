@@ -38,7 +38,7 @@
 }
 
 .dark {
-  @include color-variant($dark, $dark-color);
+  @include color-variant($dark, $white);
 }
 
 .grey {
