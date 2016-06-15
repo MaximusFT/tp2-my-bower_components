@@ -40,10 +40,10 @@
                }
             }
          &.active{
-            background-color: $warn;
+            background-color: $black;
             > a {
                background-color: transparent;
-               color: $dark;
+               color: $white;
                .nav-caret i{
                   @include rotate(180deg);
                   }

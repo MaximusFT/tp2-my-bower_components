@@ -1786,10 +1786,10 @@ body {
         .navside .nav li a:hover, .navside .nav li a:focus {
           background-color: rgba(0, 0, 0, 0.065); }
       .navside .nav li.active {
-        background-color: #ffcc00; }
+        background-color: #2a2b3c; }
         .navside .nav li.active > a {
           background-color: transparent;
-          color: #2b5264; }
+          color: #ffffff; }
           .navside .nav li.active > a .nav-caret i {
             -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
@@ -2111,7 +2111,7 @@ body {
 
 .nav-active-warn .nav-link.active,
 .nav-active-warn .nav > li.active > a {
-  color: #2b5264 !important;
+  color: rgba(255, 255, 255, 0.87) !important;
   background-color: #ffcc00 !important; }
 
 .nav-active-success .nav-link.active,
