@@ -122,4 +122,7 @@ flot .legend .legendColorBox > div > div {
   position: relative;
   color: #fff; }
 
+a.dark:hover {
+  color: #fff; }
+
 /*# sourceMappingURL=_style.css.map */
