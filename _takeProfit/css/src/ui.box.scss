@@ -48,6 +48,15 @@
 	top: 14px
 }
 
+.box-tool-left {
+	position: absolute;
+	left: 16px;
+	top: 14px;
+	.box-header{
+		padding-left: 3rem;
+	}
+}
+
 .box-shadow {
 	&,
   	.box,
