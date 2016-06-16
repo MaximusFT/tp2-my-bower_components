@@ -52,7 +52,8 @@
 	position: absolute;
 	left: 16px;
 	top: 14px;
-	.box-header{
+	z-index: 10;
+	+ .box-header{
 		padding-left: 3rem;
 	}
 }

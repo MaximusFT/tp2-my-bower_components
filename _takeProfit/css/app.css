@@ -873,7 +873,7 @@ a.list-group-item {
 .pager .page-item.active,
 .pager > .active > a,
 .pager > .active > span {
-  color: white !important;
+  color: #2b5264 !important;
   background-color: #ffcc00 !important;
   border-color: #ffcc00 !important; }
 
@@ -1324,8 +1324,9 @@ a.list-group-item {
 .box-tool-left {
   position: absolute;
   left: 16px;
-  top: 14px; }
-  .box-tool-left .box-header {
+  top: 14px;
+  z-index: 10; }
+  .box-tool-left + .box-header {
     padding-left: 3rem; }
 
 .box-shadow,
@@ -1762,19 +1763,19 @@ body {
 .navside {
   border: inherit; }
   .navside ul {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
     list-style: none; }
   .navside [flex] {
     overflow: auto; }
   .navside .nav {
     border: inherit; }
     .navside .nav li {
-      border: inherit;
-      position: relative; }
+      position: relative;
+      border: inherit; }
       .navside .nav li li a {
-        line-height: 2rem;
-        padding-left: 3.5rem; }
+        padding-left: 3.5rem;
+        line-height: 2rem; }
         .navside .nav li li a .nav-text {
           padding: 0.4375rem 0; }
       .navside .nav li li li a {
@@ -1782,10 +1783,10 @@ body {
       .navside .nav li li li li a {
         padding-left: 5.5rem; }
       .navside .nav li a {
+        position: relative;
         display: block;
         padding: 0 1rem;
-        line-height: 2.25rem;
-        position: relative; }
+        line-height: 2.25rem; }
         .navside .nav li a::after {
           content: "";
           display: table;
@@ -1793,13 +1794,16 @@ body {
         .navside .nav li a:hover, .navside .nav li a:focus {
           background-color: rgba(0, 0, 0, 0.065); }
       .navside .nav li.active {
-        background-color: rgba(0, 0, 0, 0.065); }
+        background-color: #2a2b3c; }
         .navside .nav li.active > a {
-          background-color: transparent; }
+          background-color: transparent;
+          color: #ffffff; }
           .navside .nav li.active > a .nav-caret i {
             -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
+          .navside .nav li.active > a span {
+            font-weight: 400; }
   .navside .nav-header {
     padding: 0 1rem;
     line-height: 2.25rem; }
@@ -1812,70 +1816,70 @@ body {
     margin-right: 0; }
 
 .nav-fold {
-  padding: 0.75rem 1rem; }
+  padding: .75rem 1rem; }
 
 .nav-text {
   display: block;
-  line-height: 1.125rem;
-  padding: 0.5625rem 0; }
+  padding: 0.5625rem 0;
+  line-height: 1.125rem; }
   .nav > li > a .nav-text {
     font-weight: 500; }
   .nav-text span,
   .nav-text small {
     display: block; }
   .navside .nav-text {
-    opacity: 0.75; }
+    opacity: .75; }
   .navside a:hover > .nav-text, .navside a:focus > .nav-text, .navside .active > a > .nav-text {
     opacity: 1; }
   .navbar .nav-text {
-    line-height: 1;
-    vertical-align: middle;
     display: inline-block;
-    padding: 0; }
+    padding: 0;
+    vertical-align: middle;
+    line-height: 1; }
     .navbar .nav-text span.text-xs {
-      margin-top: 0.25rem; }
+      margin-top: .25rem; }
 
 .nav-icon {
-  float: left;
-  line-height: inherit;
-  margin-right: 1rem;
   top: 0;
+  float: left;
   min-width: 1.5rem;
-  text-align: center; }
+  margin-right: 1rem;
+  text-align: center;
+  line-height: inherit; }
   .nav-icon i {
     position: relative; }
     .nav-icon i svg,
     .nav-icon i img {
-      display: none;
       position: absolute;
-      left: 0;
       top: 0;
+      left: 0;
+      display: none;
       width: 100%;
       height: 100%; }
   .navbar .nav-icon {
-    margin-right: 0.5rem; }
+    margin-right: .5rem; }
 
 .nav-label {
+  z-index: 1;
   float: right;
   margin-left: 1rem;
-  font-style: normal;
-  z-index: 1; }
+  font-style: normal; }
   .navbar .nav-label {
-    margin-left: 0.5rem; }
+    margin-left: .5rem; }
 
 .nav-caret {
   float: right;
   margin-left: 1rem;
-  opacity: 0.45; }
+  opacity: .45; }
   .nav-caret i {
     -webkit-transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out; }
   .navbar .nav-caret {
-    margin-left: 0.5rem; }
+    margin-left: .5rem; }
 
 .nav-sub {
-  max-height: 0;
   overflow: hidden;
+  max-height: 0;
   -webkit-transition: max-height 0.4s ease 0s;
   transition: max-height 0.4s ease 0s; }
   .active > .nav-sub {
@@ -2762,7 +2766,7 @@ body {
     background-color: #2a2b3c; }
 
 .dark {
-  color: rgba(255, 255, 255, 0.87);
+  color: #ffffff;
   background-color: #2b5264; }
   .dark .lt {
     background-color: #2f596d; }
