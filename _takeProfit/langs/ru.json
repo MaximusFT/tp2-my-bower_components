@@ -2,7 +2,9 @@
     "topbar": {
         "logout": "Выйти",
         "profile": "Профиль",
-        "dashboard": "Статистика"
+        "dashboard": "Статистика",
+        "linkedManager": "Связаться с Персональным менеджером",
+        "notificatedAdmin": "Администратор был уведомлён и свяжется с вами в ближайшее время"
     },
     "sidebar": {
         "heading": {
@@ -299,6 +301,18 @@
             "toBottom": " В конец"
         }
     },
+    "lassoprofit": {
+        "menu": {
+            "title": "LassoPROF"
+        },
+        "index": {
+            "region": "Регион",
+            "informationAbsent": "Информация отсутствует",
+            "noData": "Нет данных",
+            "filter": "Фильтр",
+            "accept": "Принять"
+        }
+    },
     "support": {
         "newCompose": "Новый тикет",
         "serchByCode": "Поиск по коду",
@@ -510,6 +524,8 @@
             "generalStatistics":"Общая",
             "оverallStatistics":"Свободная Статистика",
             "refreshStat":"Обновить Статистику",
+            "webCount": "Количество вебмастеров, работающих с вами",
+            "wholeByOffers": "Общая статистика по вашим офферам",
             "topFife":"Статистика по Топ 5 Офферам за последние 2 недели",
             "sources":"Источники",
             "trafficType":"Тип Трафика",
@@ -684,6 +700,10 @@
             "binaryOpcion": "Бинарный опцион",
             "education": "Обучение",
             "tradeRobot": "Торговый робот",
+            "countOfGoals": "Количество целей",
+            "mod": "Модерация",
+            "countOfGoals": "Количество целей",
+            "addOfferDesc": "Когда вы создадите оффера, нам отправится заявка на подтверждение. Она обрабатывается в течении 24 часов.",
             "trafficTypes": {
                 "adult": "Adult",
                 "banners": "Баннерная реклама",
@@ -912,6 +932,25 @@
         "code": "Код",
         "dateCreated": "Дата Создания",
         "delete": " Удаление"
+    },
+    "company": {
+        "menu": {
+            "title": "Профиль компании"
+        },
+        "index": {
+            "header": {
+                "contact": "Контактные данные",
+                "description": "Описание компании",
+                "companyName": "Название компании",
+                "geoTargeting": "Геотаргетинг",
+                "targetedAction": "Целевое действие",
+                "advertisedProduct": "Рекламируемый товар"
+            },
+            "checked": "Проверяется",
+            "download": "Скачать",
+            "uploadLogo": "Загрузить лого",
+            "uploadBrandbook": "Загрузить брэндбук"
+        }
     },
     "countries": {
         "_ABHAZIA": "абхазия",
