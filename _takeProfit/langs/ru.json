@@ -727,6 +727,23 @@
             "banners": "Баннеры",
             "resolution": "Разрешение",
             "saveDescription": "При сохранении изменения вступят в силу после подтверждения администратором.",
+            "traficSources": {
+                "adult": "Adult",
+                "clickunderOrPopunder": "Click under or pop under",
+                "teaser": "Teaser",
+                "textLink": "Text link",
+                "contextualOnBrand": "Contextual on brand",
+                "contextual": "Contextual",
+                "doorways": "Doorways",
+                "websites": "Websites",
+                "banners": "Banners",
+                "socialTarget": "Social target",
+                "socialGame": "Social game",
+                "socialGroups": "Social groups",
+                "sms": "SMS",
+                "push": "Push",
+                "mail": "Mail"
+            },
             "trafficTypes": {
                 "adult": "Adult",
                 "banners": "Баннерная реклама",
