@@ -47,6 +47,9 @@
                .nav-caret i{
                   @include rotate(180deg);
                   }
+                span{
+                	font-weight: 500;
+                }
                }
             }
          }

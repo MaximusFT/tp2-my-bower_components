@@ -1802,6 +1802,8 @@ body {
             -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
+          .navside .nav li.active > a span {
+            font-weight: 500; }
   .navside .nav-header {
     padding: 0 1rem;
     line-height: 2.25rem; }
