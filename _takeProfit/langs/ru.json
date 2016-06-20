@@ -204,6 +204,7 @@
             "createTicket": "Создать тикет",
             "responsibleGroup": "Отвественная группа",
             "selectGroup": "Выберите группу",
+            "inputEmpty": "Введите значение",
             "urgency": "Срочный?"
         },
         "message": {
@@ -740,6 +741,7 @@
             "banners": "Баннеры",
             "resolution": "Разрешение",
             "saveDescription": "При сохранении изменения вступят в силу после подтверждения администратором.",
+            "revardCondition": "Условия вознаграждения",
             "traficSources": {
                 "adult": "Adult",
                 "clickunderOrPopunder": "Click under or pop under",
