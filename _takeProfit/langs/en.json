@@ -2,10 +2,15 @@
     "topbar": {
         "logout": "Log Out",
         "profile": "Profile",
+<<<<<<< 8ea3923b4852db792de5dd19f60802e1b380897a
         "securitySettings": "Security settings",
         "dashboard": "Statistics",
         "linkedManager": "Contact personal manager",
         "notificatedAdmin": "An administrator has been notified and will contact you in the near future"
+=======
+        "securitySettings": "Security Settings",
+        "dashboard": "Statistics"
+>>>>>>> 8e7bf440ed03e87ed16a1285987c12a97398e09b
     },
     "sidebar": {
         "heading": {
