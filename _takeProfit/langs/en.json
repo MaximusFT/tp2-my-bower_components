@@ -218,6 +218,7 @@
             "info": "Information",
             "initFailed": "Data initializing were failed",
             "areYouSure": "Are you shure?",
+            "noRecover": "You will not be able to recover it!",
             "systemIdle": "Site will be blocked in ",
             "systemIdleEnd": "Site blocking was cancelled",
             "seconds": "seconds",
