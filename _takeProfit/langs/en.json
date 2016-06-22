@@ -667,6 +667,9 @@
         "noDesc": "No description",
         "passportBonus": "Bonus for passport data",
         "offers": {
+            "bannerLink": "Website address",
+            "banerSize": "Banner size",
+            "bannerImg": "Link to the image",
             "logoOffers": "Logo for offers",
             "offersSites": "Offer's Sites",
             "siteOther": "Additional sites",
