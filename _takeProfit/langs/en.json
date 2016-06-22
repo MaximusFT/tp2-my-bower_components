@@ -2,7 +2,10 @@
     "topbar": {
         "logout": "Log Out",
         "profile": "Profile",
-        "dashboard": "Statistics"
+        "securitySettings": "Security settings",
+        "dashboard": "Statistics",
+        "linkedManager": "Contact personal manager",
+        "notificatedAdmin": "An administrator has been notified and will contact you in the near future"
     },
     "sidebar": {
         "heading": {
@@ -77,6 +80,7 @@
     },
     "profile": {
         "settings": {
+            "update": "Update",
             "login": "Login",
             "status": "Status",
             "profile": "Profile",
@@ -88,11 +92,11 @@
             "notSpecified": "Not specified",
             "comment": "Comment",
             "header": "Account",
+            "email": "Email",
             "activity": "Activity",
             "mainInfo": "Main information",
             "firstName": "First Name",
             "lastName": "Last Name",
-            "email": "Email",
             "registrationDate": "Registration Date",
             "password": "Password",
             "changePass": "Change the password",
@@ -200,6 +204,8 @@
             "createTicket": "Create ticket",
             "responsibleGroup": "Responsible group",
             "selectGroup": "Select group",
+            "inputEmpty": "Enter value",
+            "inputAdress": "Enter the address",
             "urgency": "Is urgent?"
         },
         "message": {
@@ -211,8 +217,8 @@
             "savedDelete": "Item was delete",
             "notSaved": "Changes were not saved",
             "errorOccured": "The error has occured",
-            "serviceError": "Service isn't supporting now.",
             "fail": "Fail",
+            "serviceError": "Service isn't supporting now.",
             "warning": "Warning",
             "danger": "Attention",
             "info": "Information",
@@ -234,6 +240,7 @@
             "fileRemoved": "File was removed successfully",
             "subIdRemoved": "SubId was removed successfully",
             "fileNotRemoved": "File was not removed. An error has occured",
+            "noRecover": "Are you sure you want to delete",
             "fields": {
                 "required": "This field id required",
                 "tooShort": "This field is too short",
@@ -298,6 +305,18 @@
             "uploadFiles": "Upload files",
             "toHead": " Go to Head",
             "toBottom": "Go to End"
+        }
+    },
+    "lassoprofit": {
+        "menu": {
+            "title": "LassoPROF"
+        },
+        "index": {
+            "region": "Region",
+            "informationAbsent": "Information is absent",
+            "noData": "No data",
+            "filter": "Filter",
+            "accept": "Accept"
         }
     },
     "support": {
@@ -508,14 +527,17 @@
     },
     "cabinet": {
         "stats": {
-            "generalStatistics":"General",
-            "оverallStatistics":"Overall",
+            "generalStatistics":"General Statistics",
+            "оverallStatistics":"Overall Statistics",
+            "currentStatistics":"Current Statistics",
             "refreshStat":"Update statistics",
-            "topFife":"Статистика по Топ 5 Офферам за последние 2 недели",
+            "webCount": "The number of webmasters working with you",
+            "wholeByOffers": "General statistics on your offers",
+            "topFife":"Statistics on the Top 5 Offers for 2 Weeks",
             "sources":"Sources",
             "trafficType":"Traffic type",
             "noStatistics": " You have not statistics becouse you are a new User in our System. Start Add Offers And Create Resourses. Good Luck! ",
-            "noStatisticsParam": "У вас пока нет статистики по этому параметру!",
+            "noStatisticsParam": "You have no statistics on this parameter!",
             "sites": "Sites",
             "landings": "Landings",
             "parkings": "Parkings",
@@ -582,7 +604,11 @@
             "refresh": "Refresh",
             "filters": "Filters",
             "patience": "Patience...",
-            "development": "At the moment, this section is under construction!"
+            "development": "At the moment, this section is under construction!",
+            "byPartner": "By partner",
+            "byDate": "By date",
+            "byUrl": "By url",
+            "direct": "Direct"
         },
         "landDesc": "Landing page - this landing page is located on your domain.",
         "parkingDesc": "Parking - lets you replace the standard affiliate links to links that contain a name of your domain.",
@@ -613,8 +639,8 @@
         "myLandings": "My landings",
         "myMirrors": "My parkings",
         "myContent": "My content",
-        "historyRef": "Visit history",
         "myReferals": "My referals",
+        "historyRef": "Visit history",
         "statistics": "Statistics",
         "clients": "Client",
         "clientInfo": "Client info",
@@ -640,6 +666,7 @@
         "noDesc": "No description",
         "passportBonus": "Bonus for passport data",
         "offers": {
+            "logoOffers": "Logo for offers",
             "offersSites": "Offer's Sites",
             "siteOther": "Additional sites",
             "refOffersSites": "Refferal offer's Urls ",
@@ -685,6 +712,52 @@
             "binaryOpcion": "Binary opcion",
             "education": "Education",
             "tradeRobot": "Trade robot",
+            "countOfGoals": "Number of goals",
+            "mod": "Moderation",
+            "moderating": "Moderated",
+            "inwork": "Working",
+            "addOffer": "Add offers",
+            "addOfferDesc": "When you create the Offer, we send a confirmation. It is processed within 24 hours.",
+            "geo": "Geotargeting",
+            "goal": "Targeted action",
+            "goalsCount": "Number of the desired target actions",
+            "goalsLimit": "Limit targeted action in a month",
+            "keepOff": "Keep off",
+            "package": "Offers",
+            "confirmExit": "Yes, to get away from the page",
+            "correct": "Change",
+            "pause": "suspend",
+            "start": "Start",
+            "state": "Condition",
+            "inProcess": "During start-up",
+            "stopped": "Paused",
+            "info": "Information",
+            "title": "Title",
+            "url": "Url",
+            "save": "Save",
+            "code": "Code",
+            "banners": "Banners",
+            "resolution": "Resolution",
+            "saveDescription": "When you save the changes will take effect upon confirmation by the administrator",
+            "revardCondition": "Terms reward",
+            "revardConditionInfo": "Choose the amount of payment for the targeted actions",
+            "traficSources": {
+                "adult": "Adult",
+                "clickunderOrPopunder": "Click under or pop under",
+                "teaser": "Teaser",
+                "textLink": "Text link",
+                "contextualOnBrand": "Contextual on brand",
+                "contextual": "Contextual",
+                "doorways": "Doorways",
+                "websites": "Websites",
+                "banners": "Banners",
+                "socialTarget": "Social target",
+                "socialGame": "Social game",
+                "socialGroups": "Social groups",
+                "sms": "SMS",
+                "push": "Push",
+                "mail": "Mail"
+            },
             "trafficTypes": {
                 "adult": "Adult",
                 "banners": "Banners",
@@ -741,8 +814,8 @@
         "service": "Service",
         "parishBalance": "Parish balance",
         "table": "Table",
-        "notAction": "Not action",
         "actionClient": "Event",
+        "notAction": "Not action",
         "openAccount": "Open account",
         "openAndRefill": "Open and refill account",
         "refillBalance": "Refill Account",
@@ -756,9 +829,9 @@
         "expired": "expired",
         "resourceTitle": "Title",
         "resourceTitlePlaceholder": "Please, enter resource name",
+        "resourceUrl": "URL",
         "resourceType": "Type",
         "resourceTypePlaceholder": "Please, specify type of your resource",
-        "resourceUrl": "URL",
         "resourceUrlPlaceholder": "Please, enter your resource URL",
         "sourceUrl": "Source URL",
         "sourceUrlPlaceholder": "Please, enter the source URL for parking",
@@ -769,8 +842,8 @@
         "cancel": "Cancel",
         "status": "Status",
         "save": "Save",
-        "timeAftertheFirstСall": "Time after the first call",
         "delete": "Delete",
+        "timeAftertheFirstСall": "Time after the first call",
         "addResource": "Add resource",
         "editResource": "Edit resource",
         "noResources": "No resources",
@@ -833,7 +906,7 @@
             "partnerBindingSites": "sites",
             "partnerBindingEnding": "also occurs in such a transition, and it does not require a reference to the parameter or the presence of a script. The difference lies in how much of the address of the transition will be analyzed - is completely entire address (content resource, for example, http://4pda.ru/2015/11/24/259158) or only the domain (ie a site, for example, http: //4pda.ru).",
             "addingNewPlacementManual": "When you add a new site, specify what type of your resource. In addition, you must specify the address of your resource and its title, and in the case of adding a Parking Landing - the address of your chosen finished Landing to create a DNS-Parking.",
-            "descAddingNewPlacementManual": "",
+            "descAddingNewPlacementManual": "При добавлении новой площадки укажите, к какому типу относится ваш ресурс. Кроме этого необходимо указать адрес вашего ресурса и его название, а также в случае добавления зеркального лендинга — адрес выбранного вами готового лендинга для создания DNS-зеркала.",
             "addingNewResource": "After the creation of partner resource is automatically generated etiquette for administrators requiring them to conduct moderation of your application. The current status of the resource is displayed under the name of the resource, click on the status redirects you to an open ticket, which examines your life.",
             "traficClarification": "Your traffic will start to be considered immediately after the approval of the resource. Please note that subsequent editing resource data (except the name) will result in a change of the status of the resource back to \"Queued for verification\", and until the next Admin Approval traffic stops counted."
         }
@@ -914,6 +987,25 @@
         "code": "Code",
         "dateCreated": "Date Created ",
         "delete": " Delete"
+    },
+    "company": {
+        "menu": {
+            "title": "Company Profile"
+        },
+        "index": {
+            "header": {
+                "contact": "Contact details",
+                "description": "Company description",
+                "companyName": "Company name",
+                "geoTargeting": "Geotargeting",
+                "targetedAction": "Targeted action",
+                "advertisedProduct": "Advertised product"
+            },
+            "checked": "Checking",
+            "download": "Download",
+            "uploadLogo": "Download logo",
+            "uploadBrandbook": "Download brandbook"
+        }
     },
     "countries": {
         "_ABHAZIA": "abhazia",
