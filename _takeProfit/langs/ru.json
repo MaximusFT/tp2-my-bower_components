@@ -325,6 +325,14 @@
         "serchByCode": "Поиск по коду",
         "sortByUrgency": "Сортировка по Важности",
         "creatingTicket": "Создание запроса в службу поддержки",
+        "codeConnect": "Код Подключаемого оффера",
+        "ticktetName": "Название",
+        "ticktetTitle": "Заявка на добавление Оффера",
+        "resourseTitle": "Название ресурса было изменено",
+        "resourseStatus": "Статус ресурса был изменен ",
+        "resourseType": "Тип ресурса был изменен ",
+        "resourseUrl": "URL ресурса был изменен",
+        "resourseSourceUrl": "Источник ресурса URL был изменен",
         "buttons": {
             "next": "Далее",
             "previous": "Назад"

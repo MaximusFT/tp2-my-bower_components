@@ -325,6 +325,14 @@
         "serchByCode": "Serch By Code",
         "sortByUrgency": "Sort by Urgency",
         "creatingTicket": "Create a support request",
+        "codeConnect": "The code connects offers",
+        "ticktetName": "Title",
+        "ticktetTitle": "Request to add Offer",
+        "resourseTitle": "Resourse title was changed",
+        "resourseStatus": "Resourse status was changed",
+        "resourseType": "Resourse type was changed",
+        "resourseUrl": "Resourse URL was changed",
+        "resourseSourceUrl": "Resourse source URL was changed",
         "buttons": {
             "next": "Next",
             "previous": "Previous"
