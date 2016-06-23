@@ -695,6 +695,8 @@
             "connectedOffers": " Connected Offers",
             "unconnectedOffers": "Unconnected Offers",
             "allOffers": " All Offers",
+            "workOffers": "Working Offers",
+            "readyToStartOffers": "Preparing to the run",
             "toPlug": "Plug this!",
             "activity": " Offer's Activity",
             "noConnectedOffers": "You haven't Connected Offers.",
