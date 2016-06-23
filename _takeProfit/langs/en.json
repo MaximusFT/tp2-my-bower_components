@@ -749,6 +749,8 @@
             "saveDescription": "When you save the changes will take effect upon confirmation by the administrator",
             "revardCondition": "Terms reward",
             "revardConditionInfo": "Choose the amount of payment for the targeted actions",
+            "bannerLink": "Direct link to the image",
+            "bannerLinkHtml": "HTML-code with image",
             "traficSources": {
                 "adult": "Adult",
                 "clickunderOrPopunder": "Click under or pop under",

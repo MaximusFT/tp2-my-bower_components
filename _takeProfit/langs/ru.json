@@ -749,6 +749,8 @@
             "saveDescription": "При сохранении изменения вступят в силу после подтверждения администратором.",
             "revardCondition": "Условия вознаграждения",
             "revardConditionInfo": "Укажите размер оплаты за целевые действия",
+            "bannerLink": "Прямая ссылка на изображение",
+            "bannerLinkHtml": "HTML-код картинки",
             "traficSources": {
                 "adult": "Adult",
                 "clickunderOrPopunder": "Click under or pop under",
