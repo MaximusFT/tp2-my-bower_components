@@ -534,6 +534,7 @@
             "refreshStat":"Update statistics",
             "webCount": "The number of webmasters working with you",
             "wholeByOffers": "General statistics on your offers",
+            "wholeByOffersTwoWeeks": "General statistics on your offers for 2 Weeks",
             "topFife":"Statistics on the Top 5 Offers for 2 Weeks",
             "sources":"Sources",
             "trafficType":"Traffic type",
