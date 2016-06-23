@@ -401,6 +401,7 @@
         "selectPerformer": "Select performer",
         "status": "Status",
         "from": "From",
+        "ticketStatusChange": "Ticket's status was changed to ",
         "addAction": "Add comment",
         "writeMessage": "Please, write your message",
         "notAccepted": "The administrator has not accepted your ticket",
