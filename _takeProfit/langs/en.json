@@ -677,6 +677,8 @@
         "noDesc": "No description",
         "passportBonus": "Bonus for passport data",
         "offers": {
+            "draft": "Draft",
+            "stopedOffer": "Stopped",
             "development":"Need to develop",
             "developmentInfo":"If you need to develop promotional materials, please select the required",
             "bannerLink": "Website address",
