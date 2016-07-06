@@ -411,6 +411,7 @@
         "attachedFiles": "Прикрепленные файлы",
         "addCheckitem": "Добавить пункт чек-листа",
         "attachedFiles": "Прикрепленные файлы",
+        "ticketStatusChange": "Статус тикета изменен на",
         "filesLimit": "Вы не можете загрузить более 5 файлов одновременно",
         "ticketStatusChange": "Статус тикета изменет на",
         "filesUploading": "Файлы загружаются"
