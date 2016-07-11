@@ -678,6 +678,7 @@
         "noDesc": "No description",
         "passportBonus": "Bonus for passport data",
         "offers": {
+            "bannerName": "Banner Name",
             "bannerType": "Banner Type",
             "bannerPath": "Banner Path",
             "draft": "Draft",

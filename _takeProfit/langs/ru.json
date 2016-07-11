@@ -678,6 +678,7 @@
         "noDesc": "Нет описания",
         "passportBonus": "Бонус за паспортные данные",
         "offers": {
+            "bannerName": "Название баннера",
             "bannerType": "Тип баннера",
             "bannerPath": "Путь к баннеру",
             "draft": "Черновик",
