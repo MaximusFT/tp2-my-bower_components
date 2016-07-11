@@ -678,6 +678,8 @@
         "noDesc": "No description",
         "passportBonus": "Bonus for passport data",
         "offers": {
+            "bannerType": "Banner Type",
+            "bannerPath": "Banner Path",
             "draft": "Draft",
             "stopedOffer": "Stopped",
             "development":"Need to develop",
@@ -762,7 +764,6 @@
             "saveDescription": "When you save the changes will take effect upon confirmation by the administrator",
             "revardCondition": "Terms reward",
             "revardConditionInfo": "Choose the amount of payment for the targeted actions",
-            "bannerLink": "Direct link to the image",
             "bannerLinkHtml": "HTML-code with image",
             "traficSources": {
                 "adult": "Adult",
