@@ -26,6 +26,6 @@
     "commit": "4a988eebc69b783f649e16e44511bea5afa73df8"
   },
   "_source": "https://github.com/summernote/summernote.git",
-  "_target": "~0.6.16",
+  "_target": "~0.6.4",
   "_originalSource": "summernote"
 }
